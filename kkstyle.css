@@ -1,0 +1,150 @@
+body {
+	background-color: #f2efe7;
+	font-size: 14px;
+}
+#seite #navi p .aktiv a:link {
+	color: #FFDD7E;
+}
+#seite #navi p .aktiv a:visited {
+	color: #FFDD7E;
+}
+#seite #navi p .aktiv a:active {
+	color: #FFDD7E;
+}
+#seite #navi p .aktiv a:hover {
+	color: #FFDD7E;
+	background-color: #1396CB;
+}
+.aktiv {
+	background-color: #1E698F;
+	display: block;
+	/* [disabled]padding: 5px; */
+	/* [disabled]width: 190px; */
+	/* [disabled]border: 1px solid #034A8C; */
+}
+#seite {
+	background-color: #F2EFE7;
+	margin: auto;
+	min-width: 770px;
+	max-width: 1270px;
+	padding: 10px;
+}
+#seite #banner h1 {
+	font-weight: bold;
+	font-size: 300%;
+}
+#banner {
+	color: #FFF;
+	background-color: #1E698F;
+	padding: 0px;
+	height: 120px;
+	font-family: Verdana, Geneva, sans-serif;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	clear: both;
+}
+#navi {
+	float: left;
+	width: 170px;
+	margin-right: 10px;
+	font-family: Verdana, Geneva, sans-serif;
+	color: #FFDD7E;
+	background-color: #FFDD7E;
+	font-size: 120%;
+	/* [disabled]line-height: 200%; */
+	font-weight: bolder;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top: 2px;
+}
+#seite #inhalt h1 {
+	color: #FFF;
+	background-color: #1E698F;
+	font-size: 150%;
+	padding: 3px;
+}
+#seite #inhalt h2 {
+	color: #FFF;
+	background-color: #1396CB;
+	font-size: 115%;
+	padding: 3px;
+}
+#inhalt {
+	margin-left: 210px;
+	background-color: #FFF;
+	padding-top: 5px;
+	padding-right: 20px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	font-family: Verdana, Geneva, sans-serif;
+	float: none;
+}
+#topic {
+	margin-left: 240px;
+	background-color: #FFDD7E;
+	padding-top: 5px;
+	padding-right: 20px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	font-family: Verdana, Geneva, sans-serif;
+	float: none;
+	color: #034A8C;
+	font-size: 120%;
+	font-weight: bolder;
+}
+#fuss {
+	clear: both;
+	padding-top: 3px;
+	padding-right: 10px;
+	padding-bottom: 3px;
+	padding-left: 10px;
+	text-align: center;
+	margin-bottom: 10px;
+	background-color: #1E698F;
+}
+
+
+#navi a {
+	text-decoration: none;
+	display: block;
+	padding: 10px;
+}
+
+#navi a:link {
+	color: #1E698F;
+}
+  
+#navi a:visited {
+	color: #1E698F;
+}
+#navi a:hover {
+	color: #FFDD7E;
+	background-color: #1396CB;
+}
+#copyright {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+	text-align: center;
+	padding: 5px;
+	margin-left: 210px;
+}
+#navi a:active {
+	color: #FFDD7E;
+	background-color: #1396CB;
+}
+#balken {
+	background-color: #F2EFE7;
+	clear: both;
+	height: 10px;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+#kontaktbalken {
+	padding: 10px;
+	clear: both;
+	color: #000000;
+	font-family: Verdana, Geneva, sans-serif;
+	background-color: #1396CB;
+}
