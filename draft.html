@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Augenarztpraxis Dr. med. Karin König in Reutlingen – Sprechzeiten, Leistungen und Kontakt. Ab 31. August 2026 in der Kaiserstraße 57." />
+<title>Augenärztin Dr. med. Karin König · Reutlingen</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%231E698F'/%3E%3Ctext x='50' y='72' font-family='Arial, sans-serif' font-size='62' font-weight='bold' text-anchor='middle' fill='%23FFDD7E'%3EK%3C/text%3E%3C/svg%3E" />
+<style>
+/* Atkinson Hyperlegible (SIL Open Font License) – selbst gehostet, kein Abruf von Google-Servern */
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("fonts/AtkinsonHyperlegible-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("fonts/AtkinsonHyperlegible-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --papier: #F7F5EF;
+  --karte: #FFFFFF;
+  --linie: #E4DFD3;
+  --tinte: #1D2A32;
+  --tinte-sanft: #4A5A64;
+  --blau: #1E698F;
+  --blau-dunkel: #15506F;
+  --himmel: #1187B8;
+  --gelb: #FFDD7E;
+  --gelb-tief: #F7C94B;
+  --rot: #C0392B;
+  --rot-hell: #FBECE9;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+html { scroll-padding-top: 5.5rem; }
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+body {
+  font-family: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--tinte);
+  background: var(--papier);
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--himmel); }
+a:hover { color: var(--blau-dunkel); }
+
+:focus-visible {
+  outline: 3px solid var(--himmel);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.innen {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ---------- Kopf ---------- */
+
+.kopf {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--karte);
+  border-bottom: 1px solid var(--linie);
+}
+.kopf .innen {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+}
+.marke {
+  font-weight: 700;
+  color: var(--blau-dunkel);
+  text-decoration: none;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+.marke small {
+  display: block;
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: var(--tinte-sanft);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.kopf nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.1rem;
+}
+.kopf nav a {
+  text-decoration: none;
+  color: var(--tinte);
+  font-size: 0.98rem;
+  padding: 0.3rem 0;
+}
+.kopf nav a:hover { color: var(--blau); }
+
+.btn {
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.65rem 1.4rem;
+  border: 2px solid transparent;
+}
+.btn-gelb {
+  background: var(--gelb);
+  color: var(--tinte);
+}
+.btn-gelb:hover { background: var(--gelb-tief); color: var(--tinte); }
+.btn-blau {
+  background: none;
+  border-color: var(--blau);
+  color: var(--blau);
+}
+.btn-blau:hover { background: var(--blau); color: #fff; }
+.kopf .btn { padding: 0.45rem 1.1rem; font-size: 0.95rem; }
+
+/* Umzugshinweis – nach dem Umzug kann dieser Block entfernt werden */
+.umzug {
+  background: var(--rot-hell);
+  border-bottom: 1px solid #EED4CE;
+  color: var(--rot);
+  font-weight: 700;
+  text-align: center;
+  padding: 0.7rem 1.25rem;
+}
+
+/* ---------- Hero ---------- */
+
+.hero { padding: 4.5rem 0 5rem; }
+.hero .innen {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+.augenbraue {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--blau);
+  margin-bottom: 0.9rem;
+}
+.hero h1 {
+  font-size: clamp(2.3rem, 5.5vw, 3.6rem);
+  line-height: 1.1;
+  color: var(--blau-dunkel);
+  margin-bottom: 1.1rem;
+}
+.hero .unterzeile {
+  font-size: 1.25rem;
+  color: var(--tinte-sanft);
+  max-width: 34rem;
+  margin-bottom: 1.8rem;
+}
+.hero .aktionen { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+
+/* Sehprobentafel – das Erkennungszeichen der Seite */
+.tafel {
+  background: var(--karte);
+  border: 1px solid var(--linie);
+  border-radius: 14px;
+  padding: 2.2rem 1.5rem 1.6rem;
+  display: grid;
+  gap: 1.05rem;
+  justify-items: center;
+  box-shadow: 0 10px 30px rgba(29, 42, 50, 0.06);
+}
+.tafel .reihe {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  color: var(--blau-dunkel);
+  font-weight: 700;
+  line-height: 1;
+}
+.tafel .visus {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #AFA89A;
+  min-width: 2rem;
+  text-align: right;
+}
+.tafel .buchstaben { letter-spacing: 0.35em; text-indent: 0.35em; }
+.tafel .r1 .buchstaben { font-size: 4.6rem; }
+.tafel .r2 .buchstaben { font-size: 3rem; }
+.tafel .r3 .buchstaben { font-size: 2.1rem; }
+.tafel .r4 .buchstaben { font-size: 1.45rem; }
+.tafel .r5 .buchstaben { font-size: 1rem; }
+.tafel .r6 .buchstaben { font-size: 0.72rem; color: var(--blau); }
+.duochrom {
+  margin-top: 0.6rem;
+  width: 70%;
+  height: 0.55rem;
+  border-radius: 3px;
+  overflow: hidden;
+  display: flex;
+}
+.duochrom span { flex: 1; }
+.duochrom .r { background: #C4544A; }
+.duochrom .g { background: #4C9A6B; }
+
+/* ---------- Abschnitte ---------- */
+
+section { padding: 4.5rem 0; scroll-margin-top: 5.5rem; }
+section:nth-of-type(even) { background: var(--karte); }
+
+.abschnittkopf { margin-bottom: 2.2rem; max-width: 40rem; }
+.abschnittkopf h2 {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  color: var(--blau-dunkel);
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+
+/* Praxis */
+.fotos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.8rem;
+}
+.fotos figure { margin: 0; }
+.fotos img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.fotos figcaption {
+  font-size: 0.85rem;
+  color: var(--tinte-sanft);
+  padding-top: 0.5rem;
+}
+.praxistext { max-width: 44rem; }
+
+/* Leistungen */
+.karten {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.karten article {
+  background: var(--papier);
+  border: 1px solid var(--linie);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+section:nth-of-type(odd) .karten article { background: var(--karte); }
+.karten h3 {
+  color: var(--blau);
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+.karten p { font-size: 1rem; color: var(--tinte-sanft); }
+.leistungsschluss { margin-top: 1.8rem; font-weight: 700; color: var(--blau-dunkel); }
+
+/* Sprechzeiten */
+.zeiten {
+  width: 100%;
+  max-width: 38rem;
+  border-collapse: collapse;
+}
+.zeiten th, .zeiten td {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--linie);
+}
+.zeiten thead th {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--tinte-sanft);
+}
+.zeiten tbody th { color: var(--blau-dunkel); }
+.zeiten td.leer { color: #B9B2A4; }
+.zeitenhinweis { margin-top: 1.4rem; max-width: 38rem; }
+
+/* Online-Termin */
+.terminbox {
+  background: var(--blau-dunkel);
+  color: #fff;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  display: grid;
+  grid-template-columns: 1.4fr auto;
+  gap: 1.5rem;
+  align-items: center;
+}
+.terminbox h2 { font-size: clamp(1.5rem, 2.8vw, 1.9rem); margin-bottom: 0.5rem; }
+.terminbox p { color: #D9E6EE; max-width: 34rem; }
+.terminbox .badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.8rem;
+  margin-bottom: 0.8rem;
+}
+.terminbox .btn { font-size: 1.1rem; padding: 0.9rem 1.8rem; white-space: nowrap; }
+
+/* Kontakt */
+.kontaktraster {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+.adresse h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--blau);
+  margin: 1.6rem 0 0.35rem;
+}
+.adresse h3:first-child { margin-top: 0; }
+.adresse .neu { font-weight: 700; color: var(--blau-dunkel); font-size: 1.2rem; }
+.karte-rahmen {
+  border: 1px solid var(--linie);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--karte);
+}
+.karte-rahmen iframe {
+  display: block;
+  width: 100%;
+  height: 380px;
+  border: 0;
+}
+.kartenquelle {
+  font-size: 0.8rem;
+  color: var(--tinte-sanft);
+  padding: 0.5rem 0.8rem;
+}
+
+/* Impressum / Fuß */
+.impressum { background: var(--karte); border-top: 1px solid var(--linie); }
+.impressum .spalten {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 3rem;
+  font-size: 0.9rem;
+  color: var(--tinte-sanft);
+}
+.impressum h2 { font-size: 1.4rem; color: var(--blau-dunkel); margin-bottom: 1.5rem; }
+.impressum h3 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--blau);
+  margin-bottom: 0.3rem;
+}
+.impressum .block { break-inside: avoid; }
+.impressum .breit { grid-column: 1 / -1; }
+
+.fuss {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--tinte-sanft);
+  padding: 1.5rem 1.25rem 2rem;
+  background: var(--karte);
+}
+
+/* ---------- Responsiv ---------- */
+
+@media (max-width: 860px) {
+  .hero { padding: 3rem 0 3.5rem; }
+  .hero .innen { grid-template-columns: 1fr; gap: 2.5rem; }
+  .tafel { max-width: 26rem; margin: 0 auto; }
+  .karten { grid-template-columns: 1fr 1fr; }
+  .kontaktraster { grid-template-columns: 1fr; }
+  .terminbox { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  body { font-size: 1.05rem; }
+  section { padding: 3rem 0; }
+  .fotos { grid-template-columns: 1fr; }
+  .karten { grid-template-columns: 1fr; }
+  .impressum .spalten { grid-template-columns: 1fr; }
+  .tafel .r1 .buchstaben { font-size: 3.4rem; }
+  .tafel .r2 .buchstaben { font-size: 2.3rem; }
+  .tafel .r3 .buchstaben { font-size: 1.7rem; }
+}
+</style>
+</head>
+
+<body>
+
+<header class="kopf">
+  <div class="innen">
+    <a class="marke" href="#start">Dr. med. Karin König
+      <small>Fachärztin für Augenheilkunde</small>
+    </a>
+    <nav aria-label="Hauptnavigation">
+      <a href="#praxis">Praxis</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#sprechzeiten">Sprechzeiten</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="btn btn-gelb" href="#termin">Online-Termin</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Umzugshinweis: nach dem Umzug diesen Block entfernen -->
+<p class="umzug">Ab 31. August 2026 finden Sie uns in der Kaiserstraße&nbsp;57, 72764 Reutlingen.</p>
+
+<main id="start">
+
+  <div class="hero">
+    <div class="innen">
+      <div>
+        <p class="augenbraue">Augenarztpraxis · Reutlingen</p>
+        <h1>Gut sehen, gut betreut.</h1>
+        <p class="unterzeile">Herzlich willkommen in der Augenarztpraxis Dr.&nbsp;med. Karin König. Wir behandeln und betreuen sämtliche Erkrankungen des Auges – persönlich und mitten in Reutlingen.</p>
+        <div class="aktionen">
+          <a class="btn btn-gelb" href="#termin">Termin vereinbaren</a>
+          <a class="btn btn-blau" href="tel:+497121320794">07121 320794</a>
+        </div>
+      </div>
+      <div class="tafel" role="img" aria-label="Sehprobentafel mit den Wörtern König, Reutlingen und Augenheilkunde in absteigender Schriftgröße">
+        <div class="reihe r1"><span class="visus">0,1</span><span class="buchstaben">K</span></div>
+        <div class="reihe r2"><span class="visus">0,2</span><span class="buchstaben">ÖN</span></div>
+        <div class="reihe r3"><span class="visus">0,32</span><span class="buchstaben">IG</span></div>
+        <div class="reihe r4"><span class="visus">0,5</span><span class="buchstaben">REUT</span></div>
+        <div class="reihe r5"><span class="visus">0,8</span><span class="buchstaben">LINGEN</span></div>
+        <div class="reihe r6"><span class="visus">1,0</span><span class="buchstaben">AUGENHEILKUNDE</span></div>
+        <div class="duochrom"><span class="r"></span><span class="g"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="praxis">
+    <div class="innen">
+      <div class="abschnittkopf">
+        <p class="augenbraue">Unsere Praxis</p>
+        <h2>Persönliche Augenheilkunde seit vielen Jahren</h2>
+      </div>
+      <div class="fotos">
+        <figure>
+          <img src="pics/drkoenig2.jpg" alt="Augenärztin Dr. med. Karin König" width="499" height="330" />
+          <figcaption>Dr. med. Karin König</figcaption>
+        </figure>
+        <figure>
+          <img src="pics/team2.jpg" alt="Die vier Mitarbeiterinnen des Praxisteams" width="2644" height="1766" loading="lazy" />
+          <figcaption>Unser Praxisteam</figcaption>
+        </figure>
+      </div>
+      <div class="praxistext">
+        <p>Wir freuen uns, dass Sie unsere Internetseite besuchen. Hier finden Sie alles Wichtige zu unserem Leistungsspektrum, unserer Praxis und unseren Sprechzeiten.</p>
+        <p style="margin-top: 0.8rem;">Ab dem 31.&nbsp;August 2026 finden Sie uns in unseren neuen Räumen in der Kaiserstraße&nbsp;57 – bis dahin wie gewohnt am Marktplatz&nbsp;1 im 1.&nbsp;Obergeschoss.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="leistungen">
+    <div class="innen">
+      <div class="abschnittkopf">
+        <p class="augenbraue">Leistungen</p>
+        <h2>Sämtliche Augenerkrankungen – behandelt und betreut</h2>
+        <p>Von Bindehaut und Hornhaut über Iris und Netzhaut bis zum Sehnerv: Wir kümmern uns um Ihre Augen.</p>
+      </div>
+      <div class="karten">
+        <article>
+          <h3>Katarakt (Grauer Star)</h3>
+          <p>Betreuung von Patientinnen und Patienten mit Katarakt.</p>
+        </article>
+        <article>
+          <h3>Glaukom (Grüner Star)</h3>
+          <p>Untersuchung und langfristige Begleitung bei Glaukom.</p>
+        </article>
+        <article>
+          <h3>Makuladegeneration</h3>
+          <p>Betreuung bei altersbedingter Makuladegeneration.</p>
+        </article>
+        <article>
+          <h3>Kinder-Augenheilkunde</h3>
+          <p>Augenuntersuchung von Kindern – von Anfang an gut sehen.</p>
+        </article>
+        <article>
+          <h3>Brillenanpassung</h3>
+          <p>Eine gute Brillenanpassung ist uns wichtig.</p>
+        </article>
+        <article>
+          <h3>Kontaktlinsenberatung</h3>
+          <p>Beratung bei Kontaktlinsenproblemen.</p>
+        </article>
+      </div>
+      <p class="leistungsschluss">Wir würden uns freuen, auch Sie als Patientin oder Patient begrüßen zu dürfen!</p>
+    </div>
+  </section>
+
+  <section id="sprechzeiten">
+    <div class="innen">
+      <div class="abschnittkopf">
+        <p class="augenbraue">Sprechzeiten</p>
+        <h2>Wann Sie uns erreichen</h2>
+      </div>
+      <table class="zeiten">
+        <thead>
+          <tr>
+            <th scope="col"><span class="sr-only">Tag</span></th>
+            <th scope="col">Vormittag</th>
+            <th scope="col">Nachmittag</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Montag</th>
+            <td>7:30 – 11:30 Uhr</td>
+            <td>14 – 18 Uhr</td>
+          </tr>
+          <tr>
+            <th scope="row">Dienstag</th>
+            <td>7:30 – 11:30 Uhr</td>
+            <td class="leer">—</td>
+          </tr>
+          <tr>
+            <th scope="row">Mittwoch</th>
+            <td>7:30 – 11:30 Uhr</td>
+            <td>14 – 18 Uhr</td>
+          </tr>
+          <tr>
+            <th scope="row">Donnerstag</th>
+            <td>7:30 – 11:30 Uhr</td>
+            <td class="leer">—</td>
+          </tr>
+          <tr>
+            <th scope="row">Freitag</th>
+            <td>7:30 – 11:30 Uhr</td>
+            <td class="leer">—</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="zeitenhinweis">Vereinbaren Sie Ihren Termin während der Sprechzeiten telefonisch unter <a href="tel:+497121320794"><strong>07121 320794</strong></a>.</p>
+    </div>
+  </section>
+
+  <section id="termin">
+    <div class="innen">
+      <div class="terminbox">
+        <div>
+          <span class="badge">Bald verfügbar</span>
+          <h2>Online-Terminvergabe</h2>
+          <p>In Kürze können Sie Ihre Termine bequem rund um die Uhr online buchen. Bis dahin erreichen Sie uns telefonisch während der Sprechzeiten.</p>
+        </div>
+        <!-- ONLINE-TERMINVERGABE: Sobald der Buchungslink feststeht, das href unten ersetzen,
+             den Badge "Bald verfügbar" entfernen und den Text oben anpassen. -->
+        <a class="btn btn-gelb" href="tel:+497121320794">Jetzt anrufen: 07121 320794</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <div class="innen">
+      <div class="abschnittkopf">
+        <p class="augenbraue">Kontakt &amp; Anfahrt</p>
+        <h2>So finden Sie uns</h2>
+      </div>
+      <div class="kontaktraster">
+        <div class="adresse">
+          <h3>Adresse ab 31. August 2026</h3>
+          <p class="neu">Kaiserstraße 57<br />72764 Reutlingen</p>
+          <h3>Bis 30. August 2026</h3>
+          <p>Marktplatz 1, 1. Obergeschoss<br />72764 Reutlingen</p>
+          <h3>Telefon</h3>
+          <p><a href="tel:+497121320794">07121 320794</a></p>
+          <h3>Telefax</h3>
+          <p>07121 320424</p>
+          <h3>E-Mail</h3>
+          <p><a href="mailto:koenig-reutlingen@web.de">koenig-reutlingen@web.de</a></p>
+        </div>
+        <div>
+          <div class="karte-rahmen">
+            <iframe
+              title="Karte: Praxisstandort Kaiserstraße 57, 72764 Reutlingen"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=9.21100%2C48.49030%2C9.22200%2C48.49630&amp;layer=mapnik&amp;marker=48.49332%2C9.21650"
+              loading="lazy"></iframe>
+            <p class="kartenquelle">Karte: <a href="https://www.openstreetmap.org/?mlat=48.49332&amp;mlon=9.21650#map=17/48.49332/9.21650" target="_blank" rel="noopener">OpenStreetMap</a> – größere Karte öffnen</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <section class="impressum" id="impressum">
+    <div class="innen">
+      <h2>Impressum</h2>
+      <div class="spalten">
+        <div class="block">
+          <h3>Anschrift</h3>
+          <p>Dr. med. Karin König<br />
+            ab 31.08.2026: Kaiserstraße 57, 72764 Reutlingen<br />
+            bis 30.08.2026: Marktplatz 1, 72764 Reutlingen</p>
+        </div>
+        <div class="block">
+          <h3>Kontakt</h3>
+          <p>Telefon: 07121 320794<br />
+            Telefax: 07121 320424<br />
+            E-Mail: koenig-reutlingen@web.de</p>
+        </div>
+        <div class="block">
+          <h3>Geschäftsmäßigkeit</h3>
+          <p>Gesetzliche Berufsbezeichnung: Ärztin, Fachärztin für Augenheilkunde<br />
+            Berufsbezeichnung verliehen in der Bundesrepublik Deutschland<br />
+            Kassenärztliche Vereinigung Baden-Württemberg, <a href="https://www.kvbawue.de" target="_blank" rel="noopener">www.kvbawue.de</a></p>
+        </div>
+        <div class="block">
+          <h3>Zuständige Ärztekammer</h3>
+          <p>Landesärztekammer Baden-Württemberg<br />
+            Jahnstraße 40, 70597 Stuttgart<br />
+            Telefon: 0711 76989-0 · Telefax: 0711 76989-50<br />
+            E-Mail: info@laek-bw.de</p>
+        </div>
+        <div class="block breit">
+          <h3>Hinweise zu Verlinkungen</h3>
+          <p>Mit dem Urteil vom 12. Mai 1998 hat das Landgericht Hamburg entschieden, dass man durch die Anbringung eines Links die Inhalte der gelinkten Seite ggf. mit zu verantworten hat. Wir möchten also betonen, dass wir keinerlei Einfluss auf die Gestaltung und die Inhalte der gelinkten Seiten haben. Wir distanzieren uns hiermit ausdrücklich von allen Inhalten aller gelinkten Seiten auf dieser Homepage und machen uns ihre Inhalte nicht zu eigen.</p>
+        </div>
+        <div class="block breit">
+          <h3>Datenschutzerklärung</h3>
+          <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung. Die Nutzung unserer Website ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. Wir weisen darauf hin, dass die Datenübertragung im Internet (z.&nbsp;B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich. Zur Darstellung der Anfahrtskarte wird eine Karte von OpenStreetMap eingebunden; dabei wird Ihre IP-Adresse an die OpenStreetMap Foundation übertragen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <p class="fuss">© Dr. med. Karin König, 2026 · <a href="#impressum">Impressum</a></p>
+</footer>
+
+</body>
+</html>
