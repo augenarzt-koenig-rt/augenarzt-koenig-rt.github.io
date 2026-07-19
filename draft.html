@@ -331,33 +331,32 @@ section:nth-of-type(odd) .karten article { background: var(--karte); }
   height: 380px;
   border: 0;
 }
+/* Platzhalter: Karte lädt erst nach Klick (keine Anfrage an OpenStreetMap vorher) */
+.karte-platzhalter {
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  text-align: center;
+}
+.karte-platzhalter p {
+  font-size: 0.95rem;
+  color: var(--tinte-sanft);
+  max-width: 26rem;
+}
+button.btn { font: inherit; cursor: pointer; }
 .kartenquelle {
   font-size: 0.8rem;
   color: var(--tinte-sanft);
   padding: 0.5rem 0.8rem;
 }
 
-/* Impressum / Fuß */
-.impressum { background: var(--karte); border-top: 1px solid var(--linie); }
-.impressum .spalten {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem 3rem;
-  font-size: 0.9rem;
-  color: var(--tinte-sanft);
-}
-.impressum h2 { font-size: 1.4rem; color: var(--blau-dunkel); margin-bottom: 1.5rem; }
-.impressum h3 {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--blau);
-  margin-bottom: 0.3rem;
-}
-.impressum .block { break-inside: avoid; }
-.impressum .breit { grid-column: 1 / -1; }
-
+/* Fuß */
 .fuss {
+  border-top: 1px solid var(--linie);
   text-align: center;
   font-size: 0.85rem;
   color: var(--tinte-sanft);
@@ -381,7 +380,6 @@ section:nth-of-type(odd) .karten article { background: var(--karte); }
   section { padding: 3rem 0; }
   .fotos { grid-template-columns: 1fr; }
   .karten { grid-template-columns: 1fr; }
-  .impressum .spalten { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -565,10 +563,10 @@ section:nth-of-type(odd) .karten article { background: var(--karte); }
         </div>
         <div>
           <div class="karte-rahmen">
-            <iframe
-              title="Karte: Praxisstandort Kaiserstraße 57, 72764 Reutlingen"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=9.21100%2C48.49030%2C9.22200%2C48.49630&amp;layer=mapnik&amp;marker=48.49332%2C9.21650"
-              loading="lazy"></iframe>
+            <div class="karte-platzhalter" id="karte-platzhalter">
+              <p>Die Anfahrtskarte wird erst geladen, wenn Sie auf den Knopf klicken. Dabei wird Ihre IP-Adresse an OpenStreetMap übertragen.</p>
+              <button class="btn btn-blau" type="button" id="karte-laden">Karte anzeigen</button>
+            </div>
             <p class="kartenquelle">Karte: <a href="https://www.openstreetmap.org/?mlat=48.49332&amp;mlon=9.21650#map=17/48.49332/9.21650" target="_blank" rel="noopener">OpenStreetMap</a> – größere Karte öffnen</p>
           </div>
         </div>
@@ -579,48 +577,17 @@ section:nth-of-type(odd) .karten article { background: var(--karte); }
 </main>
 
 <footer>
-  <section class="impressum" id="impressum">
-    <div class="innen">
-      <h2>Impressum</h2>
-      <div class="spalten">
-        <div class="block">
-          <h3>Anschrift</h3>
-          <p>Dr. med. Karin König<br />
-            ab 31.08.2026: Kaiserstraße 57, 72764 Reutlingen<br />
-            bis 30.08.2026: Marktplatz 1, 72764 Reutlingen</p>
-        </div>
-        <div class="block">
-          <h3>Kontakt</h3>
-          <p>Telefon: 07121 320794<br />
-            Telefax: 07121 320424<br />
-            E-Mail: koenig-reutlingen@web.de</p>
-        </div>
-        <div class="block">
-          <h3>Geschäftsmäßigkeit</h3>
-          <p>Gesetzliche Berufsbezeichnung: Ärztin, Fachärztin für Augenheilkunde<br />
-            Berufsbezeichnung verliehen in der Bundesrepublik Deutschland<br />
-            Kassenärztliche Vereinigung Baden-Württemberg, <a href="https://www.kvbawue.de" target="_blank" rel="noopener">www.kvbawue.de</a></p>
-        </div>
-        <div class="block">
-          <h3>Zuständige Ärztekammer</h3>
-          <p>Landesärztekammer Baden-Württemberg<br />
-            Jahnstraße 40, 70597 Stuttgart<br />
-            Telefon: 0711 76989-0 · Telefax: 0711 76989-50<br />
-            E-Mail: info@laek-bw.de</p>
-        </div>
-        <div class="block breit">
-          <h3>Hinweise zu Verlinkungen</h3>
-          <p>Mit dem Urteil vom 12. Mai 1998 hat das Landgericht Hamburg entschieden, dass man durch die Anbringung eines Links die Inhalte der gelinkten Seite ggf. mit zu verantworten hat. Wir möchten also betonen, dass wir keinerlei Einfluss auf die Gestaltung und die Inhalte der gelinkten Seiten haben. Wir distanzieren uns hiermit ausdrücklich von allen Inhalten aller gelinkten Seiten auf dieser Homepage und machen uns ihre Inhalte nicht zu eigen.</p>
-        </div>
-        <div class="block breit">
-          <h3>Datenschutzerklärung</h3>
-          <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung. Die Nutzung unserer Website ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. Wir weisen darauf hin, dass die Datenübertragung im Internet (z.&nbsp;B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich. Zur Darstellung der Anfahrtskarte wird eine Karte von OpenStreetMap eingebunden; dabei wird Ihre IP-Adresse an die OpenStreetMap Foundation übertragen.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <p class="fuss">© Dr. med. Karin König, 2026 · <a href="#impressum">Impressum</a></p>
+  <p class="fuss">© Dr. med. Karin König, 2026 · <a href="draft_impressum.html">Impressum</a></p>
 </footer>
+
+<script>
+document.getElementById("karte-laden").addEventListener("click", function () {
+  var iframe = document.createElement("iframe");
+  iframe.title = "Karte: Praxisstandort Kaiserstraße 57, 72764 Reutlingen";
+  iframe.src = "https://www.openstreetmap.org/export/embed.html?bbox=9.21100%2C48.49030%2C9.22200%2C48.49630&layer=mapnik&marker=48.49332%2C9.21650";
+  document.getElementById("karte-platzhalter").replaceWith(iframe);
+});
+</script>
 
 </body>
 </html>
