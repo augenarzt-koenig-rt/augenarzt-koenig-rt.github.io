@@ -188,50 +188,17 @@ a:hover { color: var(--blau-dunkel); }
 }
 .hero .aktionen { display: flex; flex-wrap: wrap; gap: 0.8rem; }
 
-/* Sehprobentafel – das Erkennungszeichen der Seite */
-.tafel {
-  background: var(--karte);
-  border: 1px solid var(--linie);
+/* Porträt der Ärztin im Eingangsbereich */
+.portrait { margin: 0; }
+.portrait img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
   border-radius: 14px;
-  padding: 2.2rem 1.5rem 1.6rem;
-  display: grid;
-  gap: 1.05rem;
-  justify-items: center;
+  border: 1px solid var(--linie);
   box-shadow: 0 10px 30px rgba(29, 42, 50, 0.06);
 }
-.tafel .reihe {
-  display: flex;
-  align-items: baseline;
-  gap: 0.9rem;
-  color: var(--blau-dunkel);
-  font-weight: 700;
-  line-height: 1;
-}
-.tafel .visus {
-  font-size: 0.7rem;
-  font-weight: 400;
-  color: #AFA89A;
-  min-width: 2rem;
-  text-align: right;
-}
-.tafel .buchstaben { letter-spacing: 0.35em; text-indent: 0.35em; }
-.tafel .r1 .buchstaben { font-size: 4.6rem; }
-.tafel .r2 .buchstaben { font-size: 3rem; }
-.tafel .r3 .buchstaben { font-size: 2.1rem; }
-.tafel .r4 .buchstaben { font-size: 1.45rem; }
-.tafel .r5 .buchstaben { font-size: 1rem; }
-.tafel .r6 .buchstaben { font-size: 0.72rem; color: var(--blau); }
-.duochrom {
-  margin-top: 0.6rem;
-  width: 70%;
-  height: 0.55rem;
-  border-radius: 3px;
-  overflow: hidden;
-  display: flex;
-}
-.duochrom span { flex: 1; }
-.duochrom .r { background: #C4544A; }
-.duochrom .g { background: #4C9A6B; }
 
 /* ---------- Abschnitte ---------- */
 
@@ -261,6 +228,8 @@ section:nth-of-type(even) { background: var(--karte); }
   object-fit: cover;
   border-radius: 12px;
 }
+/* zeigt den unteren Bildteil des Kombi-Fotos (Untersuchungszimmer) */
+.fotos img.raum { object-position: bottom; }
 .fotos figcaption {
   font-size: 0.85rem;
   color: var(--tinte-sanft);
@@ -287,7 +256,6 @@ section:nth-of-type(odd) .karten article { background: var(--karte); }
   margin-bottom: 0.4rem;
 }
 .karten p { font-size: 1rem; color: var(--tinte-sanft); }
-.leistungsschluss { margin-top: 1.8rem; font-weight: 700; color: var(--blau-dunkel); }
 
 /* Sprechzeiten */
 .zeiten {
@@ -308,7 +276,6 @@ section:nth-of-type(odd) .karten article { background: var(--karte); }
 }
 .zeiten tbody th { color: var(--blau-dunkel); }
 .zeiten td.leer { color: #B9B2A4; }
-.zeitenhinweis { margin-top: 1.4rem; max-width: 38rem; }
 
 /* Online-Termin */
 .terminbox {
@@ -403,7 +370,7 @@ section:nth-of-type(odd) .karten article { background: var(--karte); }
 @media (max-width: 860px) {
   .hero { padding: 3rem 0 3.5rem; }
   .hero .innen { grid-template-columns: 1fr; gap: 2.5rem; }
-  .tafel { max-width: 26rem; margin: 0 auto; }
+  .portrait { max-width: 28rem; margin: 0 auto; }
   .karten { grid-template-columns: 1fr 1fr; }
   .kontaktraster { grid-template-columns: 1fr; }
   .terminbox { grid-template-columns: 1fr; }
@@ -415,9 +382,6 @@ section:nth-of-type(odd) .karten article { background: var(--karte); }
   .fotos { grid-template-columns: 1fr; }
   .karten { grid-template-columns: 1fr; }
   .impressum .spalten { grid-template-columns: 1fr; }
-  .tafel .r1 .buchstaben { font-size: 3.4rem; }
-  .tafel .r2 .buchstaben { font-size: 2.3rem; }
-  .tafel .r3 .buchstaben { font-size: 1.7rem; }
 }
 </style>
 </head>
@@ -455,15 +419,9 @@ section:nth-of-type(odd) .karten article { background: var(--karte); }
           <a class="btn btn-blau" href="tel:+497121320794">07121 320794</a>
         </div>
       </div>
-      <div class="tafel" role="img" aria-label="Sehprobentafel mit den Wörtern König, Reutlingen und Augenheilkunde in absteigender Schriftgröße">
-        <div class="reihe r1"><span class="visus">0,1</span><span class="buchstaben">K</span></div>
-        <div class="reihe r2"><span class="visus">0,2</span><span class="buchstaben">ÖN</span></div>
-        <div class="reihe r3"><span class="visus">0,32</span><span class="buchstaben">IG</span></div>
-        <div class="reihe r4"><span class="visus">0,5</span><span class="buchstaben">REUT</span></div>
-        <div class="reihe r5"><span class="visus">0,8</span><span class="buchstaben">LINGEN</span></div>
-        <div class="reihe r6"><span class="visus">1,0</span><span class="buchstaben">AUGENHEILKUNDE</span></div>
-        <div class="duochrom"><span class="r"></span><span class="g"></span></div>
-      </div>
+      <figure class="portrait">
+        <img src="pics/drkoenig2.jpg" alt="Augenärztin Dr. med. Karin König" width="499" height="330" />
+      </figure>
     </div>
   </div>
 
@@ -475,8 +433,8 @@ section:nth-of-type(odd) .karten article { background: var(--karte); }
       </div>
       <div class="fotos">
         <figure>
-          <img src="pics/drkoenig2.jpg" alt="Augenärztin Dr. med. Karin König" width="499" height="330" />
-          <figcaption>Dr. med. Karin König</figcaption>
+          <img class="raum" src="pics/praxis3.jpg" alt="Untersuchungszimmer der Praxis mit Untersuchungsgeräten" width="1234" height="1760" loading="lazy" />
+          <figcaption>Unser Untersuchungszimmer</figcaption>
         </figure>
         <figure>
           <img src="pics/team2.jpg" alt="Die vier Mitarbeiterinnen des Praxisteams" width="2644" height="1766" loading="lazy" />
@@ -523,7 +481,6 @@ section:nth-of-type(odd) .karten article { background: var(--karte); }
           <p>Beratung bei Kontaktlinsenproblemen.</p>
         </article>
       </div>
-      <p class="leistungsschluss">Wir würden uns freuen, auch Sie als Patientin oder Patient begrüßen zu dürfen!</p>
     </div>
   </section>
 
@@ -569,7 +526,6 @@ section:nth-of-type(odd) .karten article { background: var(--karte); }
           </tr>
         </tbody>
       </table>
-      <p class="zeitenhinweis">Vereinbaren Sie Ihren Termin während der Sprechzeiten telefonisch unter <a href="tel:+497121320794"><strong>07121 320794</strong></a>.</p>
     </div>
   </section>
 
