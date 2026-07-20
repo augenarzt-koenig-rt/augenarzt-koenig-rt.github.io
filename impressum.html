@@ -1,64 +1,202 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/v1.dwt" codeOutsideHTMLIsLocked="false" -->
+<!DOCTYPE html>
+<html lang="de">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="description" content="Auf dieser Webseite finden Sie die wichtigsten Informationen zur Augenarzpraxis Dr. med Karin König am Marktplatz in Reutlingen."
-<meta name="keywords" content="Augenarzt, Reutlingen, Marktplatz, Arzt, Ärztin, Augen, Zentral, Augenheilkunde, Sprechzeiten, Praxis"
-<!-- InstanceBeginEditable name="doctitle" -->
-<title>Augen&auml;rztin Dr. K&ouml;nig, Reutlingen</title>
-<!-- InstanceEndEditable -->
-<link href="kkstyle.css" rel="stylesheet" type="text/css" />
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Impressum und Datenschutzerklärung der Augenarztpraxis Dr. med. Karin König in Reutlingen." />
+<title>Impressum · Augenärztin Dr. med. Karin König · Reutlingen</title>
+<link rel="icon" href="favicon.ico" />
+<style>
+/* Atkinson Hyperlegible (SIL Open Font License) – selbst gehostet, kein Abruf von Google-Servern */
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("fonts/AtkinsonHyperlegible-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("fonts/AtkinsonHyperlegible-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --papier: #F7F5EF;
+  --karte: #FFFFFF;
+  --linie: #E4DFD3;
+  --tinte: #1D2A32;
+  --tinte-sanft: #4A5A64;
+  --blau: #1E698F;
+  --blau-dunkel: #15506F;
+  --himmel: #1187B8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--tinte);
+  background: var(--papier);
+}
+
+a { color: var(--himmel); }
+a:hover { color: var(--blau-dunkel); }
+
+:focus-visible {
+  outline: 3px solid var(--himmel);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.innen {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ---------- Kopf ---------- */
+
+.kopf {
+  background: var(--karte);
+  border-bottom: 1px solid var(--linie);
+}
+.kopf .innen {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+}
+.marke {
+  font-weight: 700;
+  color: var(--blau-dunkel);
+  text-decoration: none;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+.marke small {
+  display: block;
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: var(--tinte-sanft);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.kopf nav a {
+  text-decoration: none;
+  color: var(--tinte);
+  font-size: 0.98rem;
+  padding: 0.3rem 0;
+}
+.kopf nav a:hover { color: var(--blau); }
+
+/* ---------- Impressum ---------- */
+
+.impressum { padding: 3.5rem 0 4rem; }
+.impressum h1 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  color: var(--blau-dunkel);
+  margin-bottom: 1.5rem;
+}
+.impressum .spalten {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 3rem;
+  font-size: 0.95rem;
+  color: var(--tinte-sanft);
+}
+.impressum h2 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--blau);
+  margin-bottom: 0.3rem;
+}
+.impressum .block { break-inside: avoid; }
+.impressum .breit { grid-column: 1 / -1; }
+
+/* ---------- Fuß ---------- */
+
+.fuss {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--tinte-sanft);
+  padding: 1.5rem 1.25rem 2rem;
+  background: var(--karte);
+  border-top: 1px solid var(--linie);
+}
+
+@media (max-width: 560px) {
+  body { font-size: 1.05rem; }
+  .impressum .spalten { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 
 <body>
-<div id="seite">
-    <div id="banner">
-      <h1><img src="pics/banner.jpg" width="770" height="120" /></h1>
-</div>
-    <div id="kontaktbalken"></div>
-    <div id="balken"></div>
-<!-- InstanceBeginEditable name="navi" -->
-    <div id="navi">
-      <p><a href="index.html">Startseite</a><a href="leistungen.html">Leistungen</a> <a href="praxis.html">Unsere Praxis</a><a href="sprechzeiten.html">Sprechzeiten</a><span class="aktiv"><a href="impressum.html">Impressum </a></span></p>
-    </div>
-<!-- InstanceEndEditable -->
-<!-- InstanceBeginEditable name="inhalt" -->
-  <div id="inhalt">
-    <h1>Impressum</h1>
-    <h2>Anschrift</h2>
-    <p>Dr. med. Karin K&ouml;nig<br />
-      Marktplatz 1<br />
-      72764 Reutlingen
-    </p>
-    <h2>Telemedien</h2>
-    <p>Telefon: 07121/320794<br />
-    Telefax: 07121/320424</p>
-    <h2>eMail</h2>
-    <p>koenig-reutlingen@web.de</p>
-    <h2>Geschäftsm&auml;&szlig;igkeit<br />
-    </h2>
-    <p>Gesetzliche Berufsbezeichnung: Arzt/Ärztin, Fachärztin für Augenheilkunde<br />
-      Berufsbezeichnung verliehen in der Bundesrepublik Deutschland<br />
-    </p>
-    <p>Zuständige &Auml;rztekammer:<br />
-      Landesärztekammer Baden-Württemberg<br />
-      Jahnstraße 40<br />
-      70597 Stuttgart<br />
-      Telefon: 0711-769 89-0<br />
-      Telefax: 0711-769 89-50<br />
-      E-Mail: info@laek-bw.de<br />
-    </p>
-    <p>Kassen&auml;rztliche Vereinigung: Baden-Württemberg, www.kvb.de</p>
-    <h2>Hinweise zu Verlinkungen</h2>
-    <p>Mit dem Urteil vom 12. Mai 1998 hat das Landgericht Hamburg entschieden, dass man durch die Anbringung eines Links die Inhalte der gelinkten Seite ggf. mit zu verantworten hat. Wir möchten also betonen, dass wir keinerlei Einfluss auf die Gestaltung und die Inhalte der gelinkten Seiten haben. Wir distanzieren uns hiermit ausdrücklich von allen Inhalten aller gelinkten Seiten auf dieser Homepage und machen uns ihre Inhalte nicht zu eigen.  </p>
-	<h2> Datenschutzerklärung </h2>
-	<p>Die Betreiber dieser Seiten nehmen den Schutz ihrer persönlichen Daten sehr ernst. Wir behandeln ihre personenbezogenen Daten vertraulich und entsprechend  der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung. Die Nutzung unserer Website ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (  beispielsweise  Name, Anschrift oder E-Mail-Adressen ) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne ihre ausdrückliche Zustimmung nicht an Dritte  weitergegeben. Wir weisen darauf hin, dass die Datenübertragung im Internet ( z. B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
+
+<header class="kopf">
+  <div class="innen">
+    <a class="marke" href="index.html">Dr. med. Karin König
+      <small>Fachärztin für Augenheilkunde</small>
+    </a>
+    <nav aria-label="Hauptnavigation">
+      <a href="index.html">← Zurück zur Startseite</a>
+    </nav>
   </div>
-<!-- InstanceEndEditable -->
-  <div id="copyright">© Karin König, 2018</div>
-  <div id="balken"></div>
-</div>
+</header>
+
+<main class="impressum">
+  <div class="innen">
+    <h1>Impressum</h1>
+    <div class="spalten">
+      <div class="block">
+        <h2>Anschrift</h2>
+        <p>Dr. med. Karin König<br />
+          ab 31.08.2026: Kaiserstraße 57, 72764 Reutlingen<br />
+          bis 30.08.2026: Marktplatz 1, 72764 Reutlingen</p>
+      </div>
+      <div class="block">
+        <h2>Kontakt</h2>
+        <p>Telefon: 07121 320794<br />
+          Telefax: 07121 320424<br />
+          E-Mail: koenig-reutlingen@web.de</p>
+      </div>
+      <div class="block">
+        <h2>Geschäftsmäßigkeit</h2>
+        <p>Gesetzliche Berufsbezeichnung: Ärztin, Fachärztin für Augenheilkunde<br />
+          Berufsbezeichnung verliehen in der Bundesrepublik Deutschland<br />
+          Kassenärztliche Vereinigung Baden-Württemberg, <a href="https://www.kvbawue.de" target="_blank" rel="noopener">www.kvbawue.de</a></p>
+      </div>
+      <div class="block">
+        <h2>Zuständige Ärztekammer</h2>
+        <p>Landesärztekammer Baden-Württemberg<br />
+          Jahnstraße 40, 70597 Stuttgart<br />
+          Telefon: 0711 76989-0 · Telefax: 0711 76989-50<br />
+          E-Mail: info@laek-bw.de</p>
+      </div>
+      <div class="block breit">
+        <h2>Hinweise zu Verlinkungen</h2>
+        <p>Mit dem Urteil vom 12. Mai 1998 hat das Landgericht Hamburg entschieden, dass man durch die Anbringung eines Links die Inhalte der gelinkten Seite ggf. mit zu verantworten hat. Wir möchten also betonen, dass wir keinerlei Einfluss auf die Gestaltung und die Inhalte der gelinkten Seiten haben. Wir distanzieren uns hiermit ausdrücklich von allen Inhalten aller gelinkten Seiten auf dieser Homepage und machen uns ihre Inhalte nicht zu eigen.</p>
+      </div>
+      <div class="block breit">
+        <h2>Datenschutzerklärung</h2>
+        <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung. Die Nutzung unserer Website ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. Wir weisen darauf hin, dass die Datenübertragung im Internet (z.&nbsp;B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich. Die Anfahrtskarte von OpenStreetMap wird erst geladen, wenn Sie dies durch einen Klick ausdrücklich anfordern; erst dann wird Ihre IP-Adresse an die OpenStreetMap Foundation übertragen.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p class="fuss">© Dr. med. Karin König, 2026 · <a href="index.html">Zurück zur Startseite</a></p>
+</footer>
+
 </body>
-<!-- InstanceEnd --></html>
+</html>
