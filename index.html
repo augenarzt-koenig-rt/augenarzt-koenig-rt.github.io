@@ -213,14 +213,14 @@ section:nth-of-type(even) { background: var(--karte); }
   margin-bottom: 0.6rem;
 }
 
-/* Praxis */
+/* Praxis: oben zwei Querformate, darunter drei Hochformate */
 .fotos {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(6, 1fr);
   gap: 1.25rem;
-  margin-bottom: 1.8rem;
 }
-.fotos figure { margin: 0; }
+.fotos figure { margin: 0; grid-column: span 3; }
+.fotos figure.hoch { grid-column: span 2; }
 .fotos img {
   width: 100%;
   height: auto;
@@ -228,14 +228,7 @@ section:nth-of-type(even) { background: var(--karte); }
   object-fit: cover;
   border-radius: 12px;
 }
-/* zeigt den unteren Bildteil des Kombi-Fotos (Untersuchungszimmer) */
-.fotos img.raum { object-position: bottom; }
-.fotos figcaption {
-  font-size: 0.85rem;
-  color: var(--tinte-sanft);
-  padding-top: 0.5rem;
-}
-.praxistext { max-width: 44rem; }
+.fotos .hoch img { aspect-ratio: 3 / 4; }
 
 /* Leistungen */
 .karten {
@@ -379,6 +372,7 @@ button.btn { font: inherit; cursor: pointer; }
   body { font-size: 1.05rem; }
   section { padding: 3rem 0; }
   .fotos { grid-template-columns: 1fr; }
+  .fotos figure, .fotos figure.hoch { grid-column: auto; }
   .karten { grid-template-columns: 1fr; }
 }
 </style>
@@ -402,7 +396,7 @@ button.btn { font: inherit; cursor: pointer; }
 </header>
 
 <!-- Umzugshinweis: nach dem Umzug diesen Block entfernen -->
-<p class="umzug">Ab 31. August 2026 finden Sie uns in der Kaiserstraße&nbsp;57, 72764 Reutlingen.</p>
+<p class="umzug">Seit 31. August 2026 finden Sie uns in der Kaiserstraße&nbsp;57, 72764 Reutlingen.</p>
 
 <main id="start">
 
@@ -410,8 +404,8 @@ button.btn { font: inherit; cursor: pointer; }
     <div class="innen">
       <div>
         <p class="augenbraue">Augenarztpraxis · Reutlingen</p>
-        <h1>Gut sehen, gut betreut.</h1>
-        <p class="unterzeile">Herzlich willkommen in der Augenarztpraxis Dr.&nbsp;med. Karin König. Wir behandeln und betreuen sämtliche Erkrankungen des Auges – persönlich und mitten in Reutlingen.</p>
+        <h1>Augenarztpraxis Dr.&nbsp;König</h1>
+        <p class="unterzeile">Herzlich willkommen auf der Webseite der Augenarztpraxis Dr.&nbsp;med. Karin König. Wir behandeln und betreuen sämtliche Erkrankungen des Auges – persönlich und mitten in Reutlingen.</p>
         <div class="aktionen">
           <a class="btn btn-gelb" href="#termin">Termin vereinbaren</a>
           <a class="btn btn-blau" href="tel:+497121320794">07121 320794</a>
@@ -427,21 +421,24 @@ button.btn { font: inherit; cursor: pointer; }
     <div class="innen">
       <div class="abschnittkopf">
         <p class="augenbraue">Unsere Praxis</p>
-        <h2>Persönliche Augenheilkunde seit vielen Jahren</h2>
+        <h2>Team und Räumlichkeiten</h2>
       </div>
       <div class="fotos">
         <figure>
-          <img class="raum" src="pics/praxis3.jpg" alt="Untersuchungszimmer der Praxis mit Untersuchungsgeräten" width="1234" height="1760" loading="lazy" />
-          <figcaption>Unser Untersuchungszimmer</figcaption>
+          <img src="pics/praxis-wartezimmer.jpg" alt="Helles Wartezimmer mit Freischwinger-Stühlen, zwei farbigen Bildern und großen Fenstern" width="1536" height="1024" loading="lazy" />
         </figure>
         <figure>
           <img src="pics/team2.jpg" alt="Die vier Mitarbeiterinnen des Praxisteams" width="2644" height="1766" loading="lazy" />
-          <figcaption>Unser Praxisteam</figcaption>
         </figure>
-      </div>
-      <div class="praxistext">
-        <p>Wir freuen uns, dass Sie unsere Internetseite besuchen. Hier finden Sie alles Wichtige zu unserem Leistungsspektrum, unserer Praxis und unseren Sprechzeiten.</p>
-        <p style="margin-top: 0.8rem;">Ab dem 31.&nbsp;August 2026 finden Sie uns in unseren neuen Räumen in der Kaiserstraße&nbsp;57 – bis dahin wie gewohnt am Marktplatz&nbsp;1 im 1.&nbsp;Obergeschoss.</p>
+        <figure class="hoch">
+          <img src="pics/praxis-empfang.jpg" alt="Empfang der Praxis mit geschwungenem weißem Tresen" width="1024" height="1536" loading="lazy" />
+        </figure>
+        <figure class="hoch">
+          <img src="pics/praxis-wartebereich.jpg" alt="Drei Stühle unter einem gerahmten Bild im Flur der Praxis" width="1024" height="1536" loading="lazy" />
+        </figure>
+        <figure class="hoch">
+          <img src="pics/praxis-durchgang.jpg" alt="Blick vom Empfangstresen durch eine offene Tür, daneben eine Zimmerpflanze" width="1024" height="1536" loading="lazy" />
+        </figure>
       </div>
     </div>
   </section>
@@ -455,6 +452,18 @@ button.btn { font: inherit; cursor: pointer; }
       </div>
       <div class="karten">
         <article>
+          <h3>Kontaktlinsenberatung</h3>
+          <p>Beratung bei Kontaktlinsenproblemen.</p>
+        </article>
+        <article>
+          <h3>Brillenanpassung</h3>
+          <p>Eine gute Brillenanpassung ist uns wichtig.</p>
+        </article>
+        <article>
+          <h3>Kinder-Augenheilkunde</h3>
+          <p>Augenuntersuchung von Kindern – von Anfang an gut sehen.</p>
+        </article>
+        <article>
           <h3>Katarakt (Grauer Star)</h3>
           <p>Betreuung von Patientinnen und Patienten mit Katarakt.</p>
         </article>
@@ -465,18 +474,6 @@ button.btn { font: inherit; cursor: pointer; }
         <article>
           <h3>Makuladegeneration</h3>
           <p>Betreuung bei altersbedingter Makuladegeneration.</p>
-        </article>
-        <article>
-          <h3>Kinder-Augenheilkunde</h3>
-          <p>Augenuntersuchung von Kindern – von Anfang an gut sehen.</p>
-        </article>
-        <article>
-          <h3>Brillenanpassung</h3>
-          <p>Eine gute Brillenanpassung ist uns wichtig.</p>
-        </article>
-        <article>
-          <h3>Kontaktlinsenberatung</h3>
-          <p>Beratung bei Kontaktlinsenproblemen.</p>
         </article>
       </div>
     </div>
