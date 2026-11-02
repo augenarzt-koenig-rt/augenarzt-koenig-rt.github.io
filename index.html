@@ -227,6 +227,7 @@ section:nth-of-type(even) { background: var(--karte); }
 }
 .fotos figure { margin: 0; grid-column: span 3; }
 .fotos figure.hoch { grid-column: span 2; }
+.fotos figure.breit { grid-column: span 6; }
 .fotos img {
   width: 100%;
   height: auto;
@@ -369,7 +370,7 @@ button.btn { font: inherit; cursor: pointer; }
   body { font-size: 1.05rem; }
   section { padding: 3rem 0; }
   .fotos { grid-template-columns: 1fr; }
-  .fotos figure, .fotos figure.hoch { grid-column: auto; }
+  .fotos figure, .fotos figure.hoch, .fotos figure.breit { grid-column: auto; }
   .karten { grid-template-columns: 1fr; }
 }
 </style>
@@ -421,11 +422,14 @@ button.btn { font: inherit; cursor: pointer; }
         <h2>Team und Räumlichkeiten</h2>
       </div>
       <div class="fotos">
-        <figure>
-          <img src="pics/praxis-wartezimmer.jpg" alt="Helles Wartezimmer mit Freischwinger-Stühlen, zwei farbigen Bildern und großen Fenstern" width="1536" height="1024" loading="lazy" />
+        <figure class="breit">
+          <img src="pics/team2.jpg" alt="Das Praxisteam: sechs Frauen in weißen Oberteilen nebeneinander in der Praxis" width="1600" height="1065" loading="lazy" />
         </figure>
         <figure>
-          <img src="pics/team2.jpg" alt="Die vier Mitarbeiterinnen des Praxisteams" width="2644" height="1766" loading="lazy" />
+          <img src="pics/team1_v2.jpg" alt="Zwei Mitglieder des Praxisteams am geschwungenen weißen Empfangstresen" width="1536" height="1024" loading="lazy" />
+        </figure>
+        <figure>
+          <img src="pics/praxis-wartezimmer.jpg" alt="Helles Wartezimmer mit Freischwinger-Stühlen, zwei farbigen Bildern und großen Fenstern" width="1536" height="1024" loading="lazy" />
         </figure>
         <figure class="hoch">
           <img src="pics/praxis-empfang.jpg" alt="Empfang der Praxis mit geschwungenem weißem Tresen" width="1024" height="1536" loading="lazy" />
