@@ -145,6 +145,12 @@ a:hover { color: var(--blau-dunkel); }
   color: var(--blau);
 }
 .btn-blau:hover { background: var(--blau); color: #fff; }
+.btn-hell {
+  background: none;
+  border-color: rgba(255, 255, 255, 0.75);
+  color: #fff;
+}
+.btn-hell:hover { background: #fff; color: var(--blau-dunkel); }
 .kopf .btn { padding: 0.45rem 1.1rem; font-size: 0.95rem; }
 
 /* Umzugshinweis – nach dem Umzug kann dieser Block entfernt werden */
@@ -283,18 +289,8 @@ section:nth-of-type(odd) .karten article { background: var(--karte); }
 }
 .terminbox h2 { font-size: clamp(1.5rem, 2.8vw, 1.9rem); margin-bottom: 0.5rem; }
 .terminbox p { color: #D9E6EE; max-width: 34rem; }
-.terminbox .badge {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.16);
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 0.25rem 0.8rem;
-  margin-bottom: 0.8rem;
-}
-.terminbox .btn { font-size: 1.1rem; padding: 0.9rem 1.8rem; white-space: nowrap; }
+.terminbox .btn { font-size: 1.1rem; padding: 0.9rem 1.8rem; white-space: nowrap; text-align: center; }
+.terminbox .aktionen { display: flex; flex-direction: column; gap: 0.8rem; }
 
 /* Kontakt */
 .kontaktraster {
@@ -366,6 +362,7 @@ button.btn { font: inherit; cursor: pointer; }
   .karten { grid-template-columns: 1fr 1fr; }
   .kontaktraster { grid-template-columns: 1fr; }
   .terminbox { grid-template-columns: 1fr; }
+  .terminbox .aktionen { flex-direction: row; flex-wrap: wrap; }
 }
 
 @media (max-width: 560px) {
@@ -390,7 +387,7 @@ button.btn { font: inherit; cursor: pointer; }
       <a href="#leistungen">Leistungen</a>
       <a href="#sprechzeiten">Sprechzeiten</a>
       <a href="#kontakt">Kontakt</a>
-      <a class="btn btn-gelb" href="#termin">Online-Termin</a>
+      <a class="btn btn-gelb" href="https://termine.augenarzt-koenig-rt.de/appointment/search">Online-Termin</a>
     </nav>
   </div>
 </header>
@@ -528,13 +525,13 @@ button.btn { font: inherit; cursor: pointer; }
     <div class="innen">
       <div class="terminbox">
         <div>
-          <span class="badge">Bald verfügbar</span>
           <h2>Online-Terminvergabe</h2>
-          <p>In Kürze können Sie Ihre Termine bequem rund um die Uhr online buchen. Bis dahin vereinbaren Sie Ihren Termin ausschließlich telefonisch während der Sprechzeiten.</p>
+          <p>Buchen Sie Ihren Termin bequem rund um die Uhr über unsere Online-Terminvergabe. Lieber persönlich? Dann rufen Sie uns während der Sprechzeiten an.</p>
         </div>
-        <!-- ONLINE-TERMINVERGABE: Sobald der Buchungslink feststeht, das href unten ersetzen,
-             den Badge "Bald verfügbar" entfernen und den Text oben anpassen. -->
-        <a class="btn btn-gelb" href="tel:+497121320794">Jetzt anrufen: 07121 320794</a>
+        <div class="aktionen">
+          <a class="btn btn-gelb" href="https://termine.augenarzt-koenig-rt.de/appointment/search">Termin online buchen</a>
+          <a class="btn btn-hell" href="tel:+497121320794">Anrufen: 07121 320794</a>
+        </div>
       </div>
     </div>
   </section>
